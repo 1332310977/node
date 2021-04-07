@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video src="./Uploads/img/2.mp4" controls width="400" height="300" id="video"></video>
+</body>
+<script>
+    var video = document.getElementById('video')
+
+    // 7、canplaythrough：可流畅播放。当浏览器预计能够在不停下来进行缓冲的情况下持续播放指定的音频/视频时触发
+    video.addEventListener('canplaythrough', function(e) {
+      console.log('提示视频能够不停顿地一直播放')
+      console.log(e)
+    })
+
+    // 8、play：播放监听
+    video.addEventListener('play', function(e) {
+      console.log('提示该视频正在播放中')
+      console.log(e)
+    })
+
+
+
+
+    // 13、playing：当视频在已因缓冲而暂停或停止后已就绪时触发
+    video.addEventListener('playing', function(e) {
+      console.log('playing')
+      console.log(e)
+    })
+
+  
+  </script>
+</html>
